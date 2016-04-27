@@ -39,4 +39,9 @@ class Porcoes extends CI_Controller {
 		);
 		$this->load->view('porcoes', $dados);
 	}
+	
+	public function create()
+	{
+	
+	}
 }
