@@ -6,7 +6,8 @@ class Lanches extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		#$this->load->helper('form');
+		$this->load->model('lanche_model');
+		$this->load->library('table');
 	}
 	 
 	public function index()
@@ -40,6 +41,21 @@ class Lanches extends CI_Controller {
 			);
 			$this->load->view('lanches', $dados);
 		}	
+	}
+	
+	public function retrieve()
+	{
+		$dados = array(
+			'projeto' => "Fries'n Rock",
+			'titulo' => "Lanches",
+			'menu' => array(
+				0 => 'Home',
+				1 => 'Lanches',
+				2 => 'Bebidas',
+			),
+			'lanches' => $this->lanche_model->get_all()->result(),
+		);
+		$this->load->view('lanches', $dados);
 	}
 	
 	public function create()
