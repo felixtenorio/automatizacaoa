@@ -37,7 +37,6 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><?php echo anchor('home', 'Home');?></li>
-                <li><?php echo anchor('porcoes', 'Porções');?></li>
                 <li><?php echo anchor('lanches', 'Lanches');?></a></li>
 				<li><?php echo anchor('bebidas', 'Bebidas');?></a></li>
                 <li class="dropdown">

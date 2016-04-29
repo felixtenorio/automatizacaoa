@@ -2,7 +2,7 @@
 		<hr class="featurette-divider">
  <!-- FOOTER -->
 		<footer>
-			<p class="pull-right"><?php echo anchor('bebidas', 'Acesso Restrito');?></p>
+			<p class="pull-right"><?php echo anchor('login', 'Acesso Restrito');?></p>
 			<p>&copy; <?php echo date('Y');?> Company, Inc. &middot;</p>
 		</footer>
 
