@@ -38,6 +38,7 @@ class Lanches extends CI_Controller {
 					1 => 'Lanches',
 					2 => 'Bebidas',
 				),
+				'funcao' => "retrieve",
 			);
 			$this->load->view('lanches', $dados);
 		}	

@@ -19,6 +19,7 @@
   
   <!-- NAVBAR
 ================================================== -->
+  
   <body>
     <div class="navbar-wrapper">
       <div class="container">
@@ -32,14 +33,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><?php echo $projeto?></a>
+              <a class="navbar-brand" href="<?php echo base_url(); ?>"><?php echo $projeto?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><?php echo anchor('home', 'Home');?></li>
-                <li><?php echo anchor('lanches', 'Lanches');?></a></li>
-				<li><?php echo anchor('bebidas', 'Bebidas');?></a></li>
-                <li class="dropdown">
+                <li><?php echo anchor('lanches/retrieve', 'Lanches');?></li>
+				<li><?php echo anchor('bebidas', 'Bebidas');?></li>
+                <!--<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -50,8 +51,11 @@
                     <li><a href="#">Separated link</a></li>
                     <li><a href="#">One more separated link</a></li>
                   </ul>
-                </li>
+                </li>-->
               </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#" class="glyphicon glyphicon-shopping-cart itemsc"> <span class="badge">0</span></a></li>
+			  </ul>
             </div>
           </div>
         </nav>
