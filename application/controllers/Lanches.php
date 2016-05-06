@@ -61,6 +61,19 @@ class Lanches extends CI_Controller {
 	
 	public function create()
 	{
+		$pedidos = $this->input->post('pedidos');
 		
+		$dados = array(
+			'projeto' => "Fries'n Rock",
+			'titulo' => "Lanches",
+			'menu' => array(
+				0 => 'Home',
+				1 => 'Lanches',
+				2 => 'Bebidas',
+			),
+		);
+		
+		$this->session->set_flashdata('pedidos', 'Pedido realizado com sucesso, aguarde até recebe-lo');
+		redirect('lanches/retrieve', 'refresh');
 	}
 }

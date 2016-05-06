@@ -54,7 +54,7 @@
                 </li>-->
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="#" class="glyphicon glyphicon-shopping-cart itemsc"> <span class="badge">0</span></a></li>
+				<li class="carrinhol"><a href="#" class="glyphicon glyphicon-shopping-cart itemsc"> <span class="badge carrinho">0</span></a></li>
 			  </ul>
             </div>
           </div>

@@ -22,24 +22,46 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
 	<script>
 		$(document).ready(function(){
-			$('.addpedido').click(function(e){
-				e.preventDefault();
-			});
-		});
-		
-		function addPedidos()
-		{
 			var aux = 0;
 			var pedidos = [];
+			$('.addpedido').click(function(e){				
 				
-			pedidos[aux] = $(this).attr("rel");
+				pedidos[aux] = $(this).attr("rel");
+					
+				/*console.log(pedidos[aux]);*/
+					
+				aux++;
+					
+				/*console.log(pedidos.length);*/
 				
-			console.log(pedidos[aux]);
+				$('.carrinho').html(aux);
 				
-			aux++;
-				
-			console.log(pedidos.length);			
-		}
+				e.preventDefault();
+			});
+			
+			$('.carrinhol').click(function(){
+				if(pedidos.length != 0)
+				{
+					alert("Você fez: "+aux+" Pedidos, Conclua seu pedido, confirme e aguarde. Obrigado!");
+				}
+			});
+			
+			$('#addp').click(function(){
+				if(pedidos.length == 0)
+				{
+					alert("Sua lista de pedidos está vazia, escolha no cardápio ao menos um item!");
+				} else {
+					$.ajax({
+						type: "POST",
+						url: "<?php echo base_url()?>lanches/create/",
+						data: {pedidos:pedidos},
+						dataType: "json"
+					});
+					/*return false;					*/
+					location.reload(true);
+				}				
+			});			
+		});
 	</script>
   </body>
 </html>

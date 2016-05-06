@@ -7,4 +7,12 @@ class Lanche_model extends CI_Model
 	{
 		return $this->db->get('cardapio');
 	}
+	
+	public function create($id = NULL)
+	{
+		if($id != NULL)
+		{
+			
+		}
+	}
 }
